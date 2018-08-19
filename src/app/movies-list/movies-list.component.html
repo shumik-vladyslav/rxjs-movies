@@ -1,0 +1,12 @@
+<div class="container">
+
+  <app-movies-form></app-movies-form>
+
+  <div class="list-group mt-4">
+    <app-movie
+      *ngFor="let m of (movieState | async).movies"
+      [movie]="m"
+    ></app-movie>
+  </div>
+
+</div>

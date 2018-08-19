@@ -1,0 +1,30 @@
+<div
+  class="list-group-item flex-column align-items-start"
+>
+  <div class="d-flex w-100 justify-content-between">
+    <h5 class="mb-1">{{movie.name}}</h5>
+    <h5 class="mb-1">rating {{movie.rating}}</h5>
+  </div>
+  <div class="mb-1">
+
+    <div class="starrating risingstar d-flex justify-content-center flex-row-reverse">
+      <input type="radio" id="star5{{movie.id}}" name="rating" value="5" (click)="starClick(5)" /><label for="star5{{movie.id}}" title="5 star">5</label>
+      <input type="radio" id="star4{{movie.id}}" name="rating" value="4" (click)="starClick(4)" /><label for="star4{{movie.id}}" title="4 star">4</label>
+      <input type="radio" id="star3{{movie.id}}" name="rating" value="3" (click)="starClick(3)" /><label for="star3{{movie.id}}" title="3 star">3</label>
+      <input type="radio" id="star2{{movie.id}}" name="rating" value="2" (click)="starClick(2)" /><label for="star2{{movie.id}}" title="2 star">2</label>
+      <input type="radio" id="star1{{movie.id}}" name="rating" value="1" (click)="starClick(1)" /><label for="star1{{movie.id}}" title="1 star">1</label>
+    </div>
+
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-12">
+      <button
+        (click)="onDelete()"
+        type="button"
+        class="btn btn-danger btn-sm"
+      >
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
